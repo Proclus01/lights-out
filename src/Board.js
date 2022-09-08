@@ -40,7 +40,7 @@ class Board extends Component {
   constructor(props) {
     super(props);
 
-    // TODO: set initial state
+    // set initial state
     this.state = {
       hasWon: false,
       board: this.createBoard()
@@ -52,7 +52,7 @@ class Board extends Component {
   createBoard() {
     let board = [];
 
-    // TODO: create array-of-arrays of true/false values
+    // create array-of-arrays of true/false values
     for (let y = 0; y < this.props.nrows; y++) {
       let row = [];
 
@@ -85,14 +85,14 @@ class Board extends Component {
     // Flip initial cell
     flipCell(y, x);
 
-    // TODO: flip this cell and the cells around it
+    // flip this cell and the cells around it
     flipCell(y, x - 1);
     flipCell(y, x + 1);
     flipCell(y - 1, x);
     flipCell(y + 1, x);
 
     // win when every cell is turned off
-    // TODO: determine is the game has been won
+    // determine is the game has been won
     let hasWon = board.every(
       row => row.every(cell => !cell)
     );
@@ -111,11 +111,7 @@ class Board extends Component {
       return (<h1>You Win!</h1>)
     }
 
-    // TODO
-
     // make table board
-
-    // TODO
 
     let tableBoard = [];
 
